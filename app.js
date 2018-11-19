@@ -14,9 +14,10 @@ app.use(cors())
 app.use("/beers", beerRoutes)
 app.use("/students", studentRoutes)
 
-app.get("/", (req, res) => {
-    res.json("🥨")
-})
+app.get("/", (req, res) => res.json({
+    "beers": "http://localhost:3005/beers",
+    "students": "http://localhost:3005/students"
+   }));
 
 app.use(notFound)
 

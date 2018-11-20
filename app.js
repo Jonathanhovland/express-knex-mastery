@@ -15,8 +15,8 @@ app.use("/beers", beerRoutes)
 app.use("/students", studentRoutes)
 
 app.get("/", (req, res) => res.json({
-    "beers": "http://localhost:3005/beers",
-    "students": "http://localhost:3005/students"
+    "beers": "https://knexmastery.herokuapp.com/beers",
+    "students": "https://knexmastery.herokuapp.com/students"
    }));
 
 app.use(notFound)
